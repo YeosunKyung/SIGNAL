@@ -1,0 +1,27 @@
+# SIGNAL Model Requirements
+# Biologically-inspired action recognition with extreme compression
+
+# Core dependencies
+numpy>=1.19.0
+opencv-python>=4.5.0
+scikit-learn>=0.24.0
+scipy>=1.5.0
+
+# Optional for visualization
+matplotlib>=3.3.0
+seaborn>=0.11.0
+
+# Optional for model persistence
+joblib>=1.0.0
+
+# Optional for notebooks
+jupyter>=1.0.0
+ipython>=7.0.0
+
+# Optional for progress bars
+tqdm>=4.50.0
+
+# Development dependencies (optional)
+pytest>=6.0.0
+black>=20.8b1
+flake8>=3.8.0
