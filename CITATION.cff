@@ -7,8 +7,8 @@ authors:
     email: yeosun.kyung@yonsei.ac.kr
     affiliation: Yonsei University
 title: "SIGNAL: Semantic Information Guided Neuromorphic Action Learning"
-version: v1.0.0
-doi: 10.5281/zenodo.XXXXXXX
+version: v1.0.1
+doi: 10.5281/zenodo.16758099
 date-released: 2025-01-07
 url: "https://github.com/YeosunKyung/SIGNAL"
 license: MIT

@@ -2,7 +2,7 @@
 
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16758099.svg)](https://doi.org/10.5281/zenodo.16758099)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/signal-semantic-information-guided/action-recognition-on-kth)](https://paperswithcode.com/sota/action-recognition-on-kth)
 
 A biologically-inspired approach to video action recognition achieving extreme compression ratios while maintaining high accuracy.
@@ -196,7 +196,7 @@ For citations, please use the DOI from Zenodo or cite our paper:
   year = {2025},
   publisher = {GitHub},
   url = {https://github.com/YeosunKyung/SIGNAL},
-  doi = {10.5281/zenodo.XXXXXX}
+  doi = {10.5281/zenodo.16758099}
 }
 ```
 
