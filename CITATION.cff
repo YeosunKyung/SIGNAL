@@ -1,35 +1,20 @@
-# This CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to generate yours today!
-
 cff-version: 1.2.0
-title: 'SIGNAL: Semantic Information Guided Neuromorphic Action Learning'
-message: >-
-  If you use this software, please cite it using the
-  metadata from this file.
+message: "If you use this software, please cite it as below."
 type: software
 authors:
-  - given-names: Yeosun
-    family-names: Kyung
+  - family-names: Kyung
+    given-names: Yeosun
     email: yeosun.kyung@yonsei.ac.kr
     affiliation: Yonsei University
-    orcid: 'https://orcid.org/0000-0000-0000-0000'
-identifiers:
-  - type: url
-    value: 'https://github.com/YeosunKyung/SIGNAL'
-repository-code: 'https://github.com/YeosunKyung/SIGNAL'
-url: 'https://github.com/YeosunKyung/SIGNAL'
-abstract: >-
-  A biologically-inspired approach to video action
-  recognition achieving extreme compression ratios while
-  maintaining high accuracy. SIGNAL achieves 80.8% accuracy
-  on KTH dataset with 14,400:1 compression ratio using
-  LGMD-based features.
+title: "SIGNAL: Semantic Information Guided Neuromorphic Action Learning"
+version: v1.0.0
+doi: 10.5281/zenodo.XXXXXXX
+date-released: 2025-01-07
+url: "https://github.com/YeosunKyung/SIGNAL"
+license: MIT
 keywords:
   - action recognition
   - neuromorphic computing
   - LGMD
   - video compression
   - biologically-inspired
-license: MIT
-version: 1.0.0
-date-released: '2025-01-07'
