@@ -2,6 +2,8 @@
 
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXX)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/signal-semantic-information-guided/action-recognition-on-kth)](https://paperswithcode.com/sota/action-recognition-on-kth)
 
 A biologically-inspired approach to video action recognition achieving extreme compression ratios while maintaining high accuracy.
 
@@ -163,6 +165,40 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - KTH Royal Institute of Technology for the action dataset
 - Neuroscience research on LGMD neurons
 - IEEE ACCESS for publication
+
+## 🔬 Reproducibility
+
+This repository is committed to reproducible research:
+
+- **Environment**: Tested on Python 3.7-3.10
+- **Dataset**: Uses public KTH Action Dataset
+- **Random Seeds**: Fixed at 42 for all experiments
+- **Hardware**: CPU-only implementation (no GPU required)
+
+### Running Experiments
+
+```bash
+# Reproduce paper results
+python SIGNAL_model.py
+
+# With specific random seed
+PYTHONHASHSEED=0 python SIGNAL_model.py
+```
+
+### Citing this Work
+
+For citations, please use the DOI from Zenodo or cite our paper:
+
+```
+@software{signal2025,
+  author = {Kyung, Yeosun},
+  title = {SIGNAL: Semantic Information Guided Neuromorphic Action Learning},
+  year = {2025},
+  publisher = {GitHub},
+  url = {https://github.com/YeosunKyung/SIGNAL},
+  doi = {10.5281/zenodo.XXXXXX}
+}
+```
 
 ## 📧 Contact
 
