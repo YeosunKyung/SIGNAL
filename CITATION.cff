@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Kyung
+    given-names: Yeosun
+    email: yeosun.kyung@yonsei.ac.kr
+    affiliation: Yonsei University
+title: "SIGNAL: Semantic Information Guided Neuromorphic Action Learning"
+version: v1.0.1
+doi: 10.5281/zenodo.16758099
+date-released: 2025-01-07
+url: "https://github.com/YeosunKyung/SIGNAL"
+license: MIT
+keywords:
+  - action recognition
+  - neuromorphic computing
+  - LGMD
+  - video compression
+  - biologically-inspired
