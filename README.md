@@ -1,6 +1,6 @@
 # SIGNAL Framework (Semantic Information-Guided Neuromorphic Action Learning)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14503792.svg)](https://doi.org/10.5281/zenodo.14503792)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16758099.svg)](https://doi.org/10.5281/zenodo.16758099)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Status: Research Archive](https://img.shields.io/badge/Status-Research%20Archive-orange)
 
@@ -106,13 +106,13 @@ This repository represents ongoing research. While we achieve the reported perfo
 If you use this code in your research, please cite:
 
 ```bibtex
-@software{signal2024,
-  author = {Park, Kyungpil},
+@software{signal2025,
+  author = {Kyung, Yeosun},
   title = {SIGNAL: Semantic Information-Guided Neuromorphic Action Learning},
-  year = {2024},
+  year = {2025},
   publisher = {GitHub},
-  doi = {10.5281/zenodo.14503792},
-  url = {https://github.com/kyungpilpark/SIGNAL-neuromorphic-action-recognition},
+  doi = {10.5281/zenodo.16758099},
+  url = {https://github.com/YeosunKyung/SIGNAL},
   note = {See repository README for known limitations}
 }
 ```
