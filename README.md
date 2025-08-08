@@ -1,47 +1,42 @@
-# Improved LGMD Hyperbolic Pipeline
+# SIGNAL Framework (Semantic Information-Guided Neuromorphic Action Learning)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14503792.svg)](https://doi.org/10.5281/zenodo.14503792)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Status: Research Archive](https://img.shields.io/badge/Status-Research%20Archive-orange)
 
 ## Overview
 
-This repository contains an improved biologically-inspired LGMD (Lobula Giant Movement Detector) based action recognition pipeline that integrates hyperbolic contrastive learning, structural plasticity, and semantic decoding. The key improvement is the use of **leaky integration for analog voltage output** instead of binary spikes, making it more biologically realistic and information-rich.
+SIGNAL is a biologically-inspired framework for human action recognition that achieves **82.5% ± 1.2% accuracy** on the KTH dataset using neuromorphic visual processing principles.
 
 ## Key Features
 
-### 🧠 **Biologically Realistic LGMD Encoder**
-- **Spike Generation**: Binary spike trains (0/1) based on motion intensity
-- **Leaky Integration**: Converts spikes to analog voltage output (continuous values)
-- **Feed-forward Inhibition**: Lateral inhibition for feature enhancement
-- **Directional Selectivity**: Motion direction sensitivity using Sobel gradients
-- **Patch-based Attention**: Adaptive attention mechanism for spatial focus
+- 🧠 **Biologically-inspired visual processing** including LGMD (Lobula Giant Movement Detector) modeling
+- 📊 **540-dimensional feature extraction** with temporal aggregation
+- 🔧 **Ensemble classification** combining SVM, Random Forest, and Gradient Boosting
+- 📈 **Reproducible results** with 5-fold cross-validation
 
-### 🌐 **Hyperbolic Contrastive Learning**
-- **Poincaré Ball Embedding**: Non-Euclidean space for hierarchical relationships
-- **Contrastive Loss**: Positive/negative pair learning for better representations
-- **Curvature Adaptation**: Adjustable hyperbolic curvature
+## Performance
 
-### 🔄 **Structural Plasticity**
-- **Prototype Selection**: Novelty and redundancy-based prototype filtering
-- **Adaptive Thresholds**: Dynamic threshold adjustment for feature sparsity
-- **Fallback Mechanism**: Ensures at least one prototype per class
+| Metric | Value | Note |
+|--------|-------|------|
+| **Accuracy** | 82.5% ± 1.2% | Full KTH dataset, 5-fold CV |
+| **Compression Ratio** | 14,400:1 | From 14,400 to 100 features |
+| **Processing Time** | ~0.5s/video | On standard hardware |
 
-### 🎯 **Semantic Decoder**
-- **Multi-layer Perceptron**: Deep neural network for final classification
-- **Dropout Regularization**: Prevents overfitting
-- **Cross-entropy Loss**: Standard classification loss
-
-## Architecture
-
-```
-Video Input → LGMD Encoder → Hyperbolic Embedding → Structural Plasticity → Semantic Decoder → Classification
-     ↓              ↓                ↓                    ↓                    ↓
-Motion Detection → Analog Voltage → Poincaré Space → Prototype Selection → Final Prediction
-```
+### Per-Class Performance
+- Walking: 90.0%
+- Hand Waving: 88.0%
+- Boxing: 87.0%
+- Hand Clapping: 83.8%
+- Jogging: 73.0%
+- Running: 73.0%
 
 ## Installation
 
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd lgmd_project
+# Clone repository
+git clone https://github.com/kyungpilpark/SIGNAL-neuromorphic-action-recognition.git
+cd SIGNAL-neuromorphic-action-recognition
 
 # Install dependencies
 pip install -r requirements.txt
@@ -50,122 +45,94 @@ pip install -r requirements.txt
 ## Usage
 
 ### Basic Usage
-
 ```python
-from improved_lgmd_hyperbolic_pipeline import main
+from signal_model import SignalModel
 
-# Run the complete pipeline
-main()
+# Initialize model
+model = SignalModel()
+
+# Train on KTH dataset
+model.train(kth_path='path/to/KTH')
+
+# Evaluate
+accuracy = model.evaluate()
+print(f"Accuracy: {accuracy:.1%}")
 ```
 
-### Custom Parameters
+### Colab Notebooks
+- `colab_signal_evaluation.py` - Full model evaluation
+- `colab_signal_noise_robustness.py` - Noise robustness analysis
+- `colab_lgmd_contribution_5fold.py` - Feature contribution analysis
 
-```python
-from improved_lgmd_hyperbolic_pipeline import extract_lgmd_features, robust_evaluation
+## Known Limitations & Ongoing Research
 
-# Extract features with custom parameters
-X, y = extract_lgmd_features(
-    video_data, labels,
-    patch_size=8,
-    leak_rate=0.95,        # Leaky integration rate
-    threshold=0.1,         # Spike generation threshold
-    feedforward_inhibition=0.3,  # Inhibition strength
-    directional_weight=0.2       # Directional selectivity weight
-)
+### Current Limitations
+1. **LGMD Contribution**: Current implementation shows minimal LGMD feature contribution. Investigation ongoing.
+2. **Noise Robustness**: Performance degrades significantly below 20dB SNR
+3. **Small Sample Performance**: Accuracy varies on small subsets
 
-# Run evaluation
-results = robust_evaluation(X, y, n_splits=3, n_seeds=3)
-```
+### Active Research Areas
+- [ ] Improving LGMD neural modeling fidelity
+- [ ] Enhancing noise robustness mechanisms
+- [ ] Optimizing computational efficiency
+- [ ] Extending to other action datasets
 
-## Key Improvements Over Previous Version
+## Scientific Integrity Note
 
-### 1. **Analog Voltage Output**
-- **Before**: Binary spikes (0/1) → Information loss
-- **After**: Leaky integration → Continuous voltage values → Rich information
+This repository represents ongoing research. While we achieve the reported performance metrics, we acknowledge certain biological features (particularly LGMD) do not contribute as theoretically expected. We maintain this code public for:
 
-### 2. **Enhanced Feature Extraction**
-- **Motion Detection**: Frame difference + directional gradients
-- **Attention Mechanism**: Patch-based adaptive attention
-- **Inhibition**: Feed-forward lateral inhibition
+1. **Transparency** - All results are reproducible
+2. **Education** - Learning from both successes and limitations
+3. **Collaboration** - Inviting improvements from the community
 
-### 3. **Robust Prototype Selection**
-- **Lowered Thresholds**: `novelty_thresh=0.05`, `redundancy_thresh=0.1`
-- **Increased Prototypes**: `max_prototypes_per_class=10`
-- **Fallback Protection**: Ensures prototype availability
-
-### 4. **Comprehensive Evaluation**
-- **Multiple Baselines**: CNN, SNN, LGMD baselines
-- **Statistical Testing**: Paired t-tests for significance
-- **Ablation Studies**: Component contribution analysis
-- **Hyperparameter Sweep**: Automated parameter optimization
-
-## Performance Comparison
-
-| Model | Accuracy | Improvement |
-|-------|----------|-------------|
-| Previous LGMD | ~16.7% | Baseline |
-| **Improved LGMD** | **~60%+** | **+43.3%** |
-| CNN Baseline | ~65% | Reference |
-| SNN Baseline | ~64% | Reference |
-
-## Biological Plausibility
-
-### LGMD Characteristics
-- **Motion Sensitivity**: Responds to looming objects
-- **Directional Selectivity**: Different responses to motion directions
-- **Temporal Integration**: Leaky integration of spike trains
-- **Lateral Inhibition**: Surround suppression for feature enhancement
-
-### Advantages of Analog Output
-1. **Information Richness**: Continuous values vs binary
-2. **Gradient Flow**: Better for backpropagation
-3. **Biological Realism**: Actual LGMD shows analog responses
-4. **Robustness**: Less sensitive to threshold variations
-
-## File Structure
+## Repository Structure
 
 ```
-lgmd_project/
-├── improved_lgmd_hyperbolic_pipeline.py  # Main pipeline
-├── requirements.txt                      # Dependencies
-├── README.md                            # This file
-└── data/                                # Dataset directory (if needed)
+.
+├── notebooks/
+│   ├── colab_signal_evaluation.py      # Main evaluation script
+│   ├── colab_signal_features.py        # Feature extraction
+│   └── colab_signal_noise_robustness.py # Robustness testing
+├── figures/
+│   └── signal_performance.png          # Performance visualizations
+├── requirements.txt
+└── README.md
 ```
-
-## Dependencies
-
-- **PyTorch**: Deep learning framework
-- **OpenCV**: Computer vision operations
-- **GeoOpt**: Hyperbolic geometry
-- **Scikit-learn**: Machine learning utilities
-- **NumPy/SciPy**: Numerical computations
-- **Matplotlib/Seaborn**: Visualization
 
 ## Citation
 
 If you use this code in your research, please cite:
 
 ```bibtex
-@article{lgmd_hyperbolic_2024,
-  title={Improved LGMD-based Action Recognition with Hyperbolic Contrastive Learning},
-  author={Your Name},
-  journal={arXiv preprint},
-  year={2024}
+@software{signal2024,
+  author = {Park, Kyungpil},
+  title = {SIGNAL: Semantic Information-Guided Neuromorphic Action Learning},
+  year = {2024},
+  publisher = {GitHub},
+  doi = {10.5281/zenodo.14503792},
+  url = {https://github.com/kyungpilpark/SIGNAL-neuromorphic-action-recognition},
+  note = {See repository README for known limitations}
 }
 ```
 
+## Future Improvements
+
+We welcome contributions to address:
+- Enhanced LGMD biological fidelity
+- Improved noise robustness
+- Extended dataset support
+- Computational optimizations
+
 ## License
 
-MIT License - see LICENSE file for details.
+MIT License - see [LICENSE](LICENSE) file for details.
 
-## Contributing
+## Acknowledgments
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+- KTH Action Dataset creators
+- Biological vision research community
+- Open science principles
 
-## Contact
+---
 
-For questions or issues, please open an issue on GitHub or contact [your-email@domain.com]. 
+**Note**: This is a research archive. For questions or collaborations, please open an issue or contact the authors.
