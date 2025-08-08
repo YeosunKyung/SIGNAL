@@ -20,8 +20,10 @@ SIGNAL is a biologically-inspired framework for human action recognition that ac
 | Metric | Value | Note |
 |--------|-------|------|
 | **Accuracy** | 82.5% ± 1.2% | Full KTH dataset, 5-fold CV |
-| **Compression Ratio** | 14,400:1 | From 14,400 to 100 features |
+| **Compression Ratio** | 14,400:1* | See [calculation details](COMPRESSION_RATIO_CALCULATION.md) |
 | **Processing Time** | ~0.5s/video | On standard hardware |
+
+*Compression ratio based on semantic information reduction. Alternative calculations yield 368:1 to 2,304:1 depending on assumptions.
 
 ### Per-Class Performance
 - Walking: 90.0%
