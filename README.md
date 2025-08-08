@@ -138,3 +138,5 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ---
 
 **Note**: This is a research archive. For questions or collaborations, please open an issue or contact the authors.
+
+**Development Transparency**: This repository's contribution history shows AI assistance (Claude) during the initial code implementation phase. All scientific concepts, research design, experimental decisions, and results are solely the work of the human authors. The AI tool was used only for coding assistance, similar to using an advanced IDE or code completion tool.
