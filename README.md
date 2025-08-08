@@ -1,6 +1,6 @@
 # SIGNAL Framework (Semantic Information-Guided Neuromorphic Action Learning)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16758099.svg)](https://doi.org/10.5281/zenodo.16758099)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14503792.svg)](https://doi.org/10.5281/zenodo.14503792)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Status: Research Archive](https://img.shields.io/badge/Status-Research%20Archive-orange)
 
@@ -61,10 +61,8 @@ accuracy = model.evaluate()
 print(f"Accuracy: {accuracy:.1%}")
 ```
 
-### Colab Notebooks
-- `colab_signal_evaluation.py` - Full model evaluation
-- `colab_signal_noise_robustness.py` - Noise robustness analysis
-- `colab_lgmd_contribution_5fold.py` - Feature contribution analysis
+### Running the Model
+For Google Colab execution, upload `SIGNAL_model.py` and the KTH dataset to your Google Drive, then run the model directly.
 
 ## Known Limitations & Ongoing Research
 
@@ -106,13 +104,13 @@ This repository represents ongoing research. While we achieve the reported perfo
 If you use this code in your research, please cite:
 
 ```bibtex
-@software{signal2025,
-  author = {Kyung, Yeosun},
+@software{signal2024,
+  author = {Park, Kyungpil},
   title = {SIGNAL: Semantic Information-Guided Neuromorphic Action Learning},
-  year = {2025},
+  year = {2024},
   publisher = {GitHub},
-  doi = {10.5281/zenodo.16758099},
-  url = {https://github.com/YeosunKyung/SIGNAL},
+  doi = {10.5281/zenodo.14503792},
+  url = {https://github.com/kyungpilpark/SIGNAL-neuromorphic-action-recognition},
   note = {See repository README for known limitations}
 }
 ```
@@ -139,4 +137,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 **Note**: This is a research archive. For questions or collaborations, please open an issue or contact the authors.
 
-**Development Transparency**: This repository's contribution history shows AI assistance (Claude) during the initial code implementation phase. All scientific concepts, research design, experimental decisions, and results are solely the work of the human authors. The AI tool was used only for coding assistance, similar to using an advanced IDE or code completion tool.
+**Development Note**: This repository shows Claude AI as a contributor due to initial development assistance during code implementation. All scientific concepts, research design, and experimental decisions are solely by the human authors.
