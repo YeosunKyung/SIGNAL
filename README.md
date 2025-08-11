@@ -138,3 +138,5 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ---
 
 **Note**: This is a research archive. For questions or collaborations, please open an issue or contact the authors.
+
+**Repository Note**: Automated tools were used solely for repository management tasks. All research, algorithms, and scientific contributions are by the human authors.
