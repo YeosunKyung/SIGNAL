@@ -319,7 +319,7 @@ class VideoProcessor:
             video_path: Path to video file
             
         Returns:
-            np.array: Aggregated feature vector or None if failed
+            np.array: Aggregated feature vector or None if not available
         """
         # Load video
         cap = cv2.VideoCapture(video_path)
