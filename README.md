@@ -39,8 +39,8 @@ SIGNAL is a high-performance framework for human action recognition that achieve
 
 ```bash
 # Clone repository
-git clone https://github.com/kyungpilpark/SIGNAL-neuromorphic-action-recognition.git
-cd SIGNAL-neuromorphic-action-recognition
+git clone https://github.com/YeosunKyung/SIGNAL.git
+cd SIGNAL
 
 # Install dependencies
 pip install -r requirements.txt
@@ -107,12 +107,12 @@ If you use this code in your research, please cite:
 
 ```bibtex
 @software{signal2024,
-  author = {Park, Kyungpil},
+  author = {Kyung, Yeosun},
   title = {SIGNAL: Semantic Information-Guided Neuromorphic Action Learning},
   year = {2024},
   publisher = {GitHub},
   doi = {10.5281/zenodo.14503792},
-  url = {https://github.com/kyungpilpark/SIGNAL-neuromorphic-action-recognition},
+  url = {https://github.com/YeosunKyung/SIGNAL},
   note = {High-performance video action recognition with extreme compression}
 }
 ```
