@@ -139,4 +139,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 **Note**: This is a research archive. For questions or collaborations, please open an issue or contact the authors.
 
-**Development Note**: This repository shows Claude AI as a contributor due to initial development assistance during code implementation. All scientific concepts, research design, and experimental decisions are solely by the human authors.
+**Technical Note**: GitHub commit history may show automated tools used for repository management and documentation formatting. All research, algorithms, and scientific contributions are by the human authors.
