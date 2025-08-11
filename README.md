@@ -2,7 +2,10 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14503792.svg)](https://doi.org/10.5281/zenodo.14503792)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Status: Research Archive](https://img.shields.io/badge/Status-Research%20Archive-orange)
+![Python](https://img.shields.io/badge/python-3.7+-blue.svg)
+![Status: Active](https://img.shields.io/badge/Status-Active-success)
+[![Compression](https://img.shields.io/badge/Compression-14%2C400%3A1-ff69b4)](https://github.com/YeosunKyung/SIGNAL)
+[![Accuracy](https://img.shields.io/badge/Accuracy-82.5%25-green)](https://github.com/YeosunKyung/SIGNAL)
 
 ## Overview
 

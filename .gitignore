@@ -168,4 +168,50 @@ ehthumbs.db
 *.npz
 *.pth
 *.pt
-*.ckptCLAUDE.md
+*.ckpt
+
+# Internal documentation and experimental files
+CLAUDE.md
+*_test.py
+*_experiment*.py
+*_90plus*.py
+*_80plus*.py
+t4t5_*.py
+colab_*.py
+semantic_preservation_*.py
+integrated_*.py
+lgmd_*.py
+part[0-9]_*.py
+enhanced_*.py
+prototype_*.py
+ablation_*.py
+verify_*.py
+validate_*.py
+analyze_*.py
+run_*.py
+
+# Internal analysis documents
+*_analysis.md
+*_strategy.md
+*_improvements*.md
+*_summary.md
+*_results.md
+error_*.md
+critical_*.md
+implementation_*.md
+batch_*.md
+visual_*.md
+
+# Quick tests and demos
+quick_start_*.py
+*demo*.py
+test_*.py
+
+# Keep only essential files
+!SIGNAL_model.py
+!requirements.txt
+!README.md
+!LICENSE
+!CITATION.cff
+!COMPRESSION_RATIO_CALCULATION.md
+!SIGNAL_Paper_Results_Summary.md
